@@ -1,0 +1,67 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Definition of the design system. All colors, gradients, fonts, etc should be defined here. 
+All colors MUST be HSL.
+*/
+
+@layer base {
+  :root {
+    /* Rich Indian-inspired color palette */
+    --background: 200 20% 8%;
+    --foreground: 40 100% 95%;
+
+    --card: 200 25% 12%;
+    --card-foreground: 40 100% 95%;
+
+    --popover: 200 25% 12%;
+    --popover-foreground: 40 100% 95%;
+
+    /* Deep saffron/orange - primary brand color */
+    --primary: 25 95% 55%;
+    --primary-foreground: 200 20% 8%;
+    --primary-glow: 25 95% 65%;
+
+    /* Teal accent */
+    --secondary: 175 65% 45%;
+    --secondary-foreground: 40 100% 95%;
+
+    --muted: 200 20% 20%;
+    --muted-foreground: 40 20% 70%;
+
+    /* Gold accent */
+    --accent: 45 100% 55%;
+    --accent-foreground: 200 20% 8%;
+
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 40 100% 95%;
+
+    --border: 200 20% 20%;
+    --input: 200 20% 18%;
+    --ring: 25 95% 55%;
+
+    --radius: 0.75rem;
+
+    /* Custom gradients */
+    --gradient-hero: linear-gradient(135deg, hsl(25 95% 35%) 0%, hsl(175 65% 25%) 50%, hsl(200 25% 12%) 100%);
+    --gradient-card: linear-gradient(135deg, hsl(200 25% 15%) 0%, hsl(200 30% 10%) 100%);
+    
+    /* Glow effects */
+    --glow-primary: 0 0 60px hsl(25 95% 55% / 0.4);
+    --glow-secondary: 0 0 40px hsl(175 65% 45% / 0.3);
+    
+    /* Animations */
+    --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+  }
+}
