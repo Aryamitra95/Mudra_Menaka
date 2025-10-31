@@ -1,11 +1,18 @@
+import React from "@/assets/icons8-react-48.png";
+import MediaPipe from "@/assets/Screenshot 2025-10-31 215652 1.png";
+import TensorFlow from "@/assets/icons8-tensorflow-48.png";
+import TypeScript from "@/assets/icons8-typescript-48.png";
+import Python from "@/assets/Python.png";
+import Tailwind from "@/assets/icons8-tailwind-css-48.png"
+
 const TechnologySection = () => {
   const technologies = [
-    { name: "MediaPipe", icon: "🤲" },
-    { name: "TensorFlow", icon: "🧠" },
-    { name: "Python", icon: "🐍" },
-    { name: "React", icon: "⚛️" },
-    { name: "OpenCV", icon: "👁️" },
-    { name: "Neural Networks", icon: "🕸️" }
+    { name: "MediaPipe", icon: MediaPipe },
+    { name: "TensorFlow", icon: TensorFlow },
+    { name: "Python", icon: Python },
+    { name: "React",icon: React },
+    { name: "Tailwind", icon: Tailwind },
+    { name: "TypeScript", icon: TypeScript }
   ];
 
   return (
@@ -28,7 +35,9 @@ const TechnologySection = () => {
               style={{ animationDelay: `${index * 0.1}s` }}
             >
               <div className="w-20 h-20 rounded-2xl bg-card border border-border flex items-center justify-center text-4xl group-hover:scale-110 group-hover:border-primary/50 transition-all duration-300 group-hover:shadow-lg group-hover:shadow-primary/20">
-                {tech.icon}
+                <img
+                 src={tech.icon}
+                />
               </div>
               <span className="text-sm font-medium text-muted-foreground group-hover:text-primary transition-colors">
                 {tech.name}

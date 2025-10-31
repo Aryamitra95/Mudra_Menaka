@@ -316,14 +316,16 @@ const HandGestureDetector = () => {
         </button>
       ) : (
         <button
-          className="px-4 py-2 rounded-md bg-secondary text-secondary-foreground"
+          className="px-4 py-2 rounded-md bg-secondary text-secondary-foreground my-8"
           onClick={() => setStarted(false)}
         >
           Stop
         </button>
       )}
       <div className="relative w-full max-w-xl">
-        <video
+        {started && (
+          <div className="relative flex flex-col mx-2 w-full overflow-hidden rounded-lg">
+          <video
           ref={videoRef}
           className="w-full rounded-lg shadow-md"
           playsInline
@@ -333,9 +335,13 @@ const HandGestureDetector = () => {
         />
         <canvas
           ref={canvasRef}
-          className="absolute inset-0 w-full h-full pointer-events-none"
+          className="absolute inset-0 pointer-events-none"
           style={{ transform: "scaleX(-1)" }}
         />
+       
+        </div>
+        )}
+         
       </div>
       <div className="text-sm text-muted-foreground">{label ? `Prediction: ${label}` : started ? "Show your hand to the camera" : "Click Start to initialize the model"}</div>
     </div>

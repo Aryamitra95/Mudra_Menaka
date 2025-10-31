@@ -2,6 +2,7 @@ import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
 import { Camera } from "lucide-react";
 import mudraHands from "@/assets/mudra-hands.jpg";
+import HandGestureDetector from "./HandGestureDetector";
 
 const DemoSection = () => {
   const startDetector = () => {
@@ -24,7 +25,7 @@ const DemoSection = () => {
       
       <div className="container mx-auto px-6 relative z-10">
         <div className="text-center mb-16">
-          <h2 className="text-4xl md:text-5xl font-bold mb-6 bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent">
+          <h2 className="py-4 text-4xl md:text-5xl font-bold mb-6 bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent">
             Try Our Prototype
           </h2>
           <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
@@ -41,15 +42,7 @@ const DemoSection = () => {
               <h3 className="mt-6 text-2xl font-semibold text-foreground">Real-time Camera Detection</h3>
               <p className="text-muted-foreground">Click the button below to start your camera and run live detection.</p>
             </div>
-
-            <Button 
-              className="w-full bg-secondary hover:bg-secondary/90 text-secondary-foreground"
-              size="lg"
-              onClick={startDetector}
-            >
-              <Camera className="mr-2 h-5 w-5" />
-              Start Real-time Detection
-            </Button>
+              <HandGestureDetector/>
           </div>
         </Card>
 
