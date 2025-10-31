@@ -5,6 +5,7 @@ import TechnologySection from "@/components/TechnologySection";
 import DemoSection from "@/components/DemoSection";
 import MudraGallery from "@/components/MudraGallery";
 import Footer from "@/components/Footer";
+import HandGestureDetector from "@/components/HandGestureDetector";
 
 const Index = () => {
   return (
@@ -14,6 +15,7 @@ const Index = () => {
       <AboutSection />
       <TechnologySection />
       <DemoSection />
+      <HandGestureDetector />
       <MudraGallery />
       <Footer />
     </div>
